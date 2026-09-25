@@ -29,24 +29,21 @@ Tayyor havolalar statistika sahifasining pastida bor.
 Statistika sahifasiga kirgan qurilmadagi tashriflar hisobga olinmaydi.
 Hisoblagich bepul `abacus.jasoncameron.dev` servisida ishlaydi.
 
-## Ariza formasi
+## Ariza formasi → Telegram bot
 
-Arizalar avval Telegram botga yuboriladi (`functions/api/lead.js`, Cloudflare Pages Function).
-Bot sozlanmagan yoki Telegram javob bermasa, zaxira sifatida FormSubmit orqali `sodikhovd@gmail.com` ga ketadi
-(FormSubmit birinchi xatdagi **Activate Form** tugmasi bilan bir marta faollashtiriladi).
-
-Bot sozlamalari Cloudflare’da yashirin saqlanadi, kodda token yo‘q:
+Arizalar faqat Telegram botga keladi (`functions/api/lead.js`, Cloudflare Pages Function). Token kodda yo‘q,
+Cloudflare’da yashirin saqlanadi:
 
 ```bash
 npx wrangler pages secret put TELEGRAM_BOT_TOKEN --project-name ayro
 npx wrangler pages secret put TELEGRAM_CHAT_ID --project-name ayro
 ```
 
-`TELEGRAM_CHAT_ID` — arizani oladigan Telegram ID (bir nechta bo‘lsa vergul bilan). Botga oldin **Start** bosilgan
-bo‘lishi kerak. Sozlamadan keyin saytni qayta deploy qiling.
+`TELEGRAM_CHAT_ID` — arizani oladigan chat (bir nechta bo‘lsa vergul bilan). Botga oldin **Start** bosilgan bo‘lishi
+kerak. Chat ID’ni `/api/setup?key=<SETUP_KEY>` ko‘rsatadi. Secret o‘zgargach saytni qayta deploy qiling.
 
-Funksiya himoyasi: boshqa saytdan kelgan so‘rov, honeypot, 2,5 soniyadan tez yuborilgan forma va bir IP’dan
-10 daqiqada 3 tadan ortiq ariza rad etiladi.
+Himoya: boshqa saytdan kelgan so‘rov, honeypot, 2,5 soniyadan tez yuborilgan forma va bir IP’dan 10 daqiqada
+3 tadan ortiq ariza rad etiladi.
 
 ## Real loyihalarni qo‘shish
 
@@ -74,8 +71,9 @@ orqali ulang. Keyin `index.html`, `sitemap.xml` va `robots.txt` dagi manzillarni
 
 ## Yangilash (deploy)
 
-Repo papkasidan (Functions `functions/` dan olinadi), statik fayllarni `.git`, `functions`, README’siz nusxada:
+`main` ga `git push` qilinganda `.githooks/pre-push` push qilinayotgan commitni Cloudflare Pages’ga o‘zi yuklaydi.
+Yangi klonda bir marta yoqing (wrangler’ga `npx wrangler login` bilan kirilgan bo‘lishi kerak):
 
 ```bash
-npx wrangler pages deploy <nusxa-papka> --project-name ayro --branch main
+git config core.hooksPath .githooks
 ```
