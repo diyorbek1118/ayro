@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AYRO — veb-sayt, internet do‘kon, CRM va Telegram bot yaratish</title>
+<meta name="description" content="AYRO — veb-sayt, internet do‘kon, CRM/ERP tizim, Telegram bot va veb-ilovalar yaratadigan dasturlash studiyasi. SEO optimizatsiya, tezkor yuklanish, xavfsiz deploy va doimiy qo‘llab-quvvatlash.">
+<link rel="canonical" href="https://diyorbek1118.github.io/ayro/">
+<meta name="theme-color" content="#0A0A0B">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AYRO">
+<meta property="og:locale" content="uz_UZ">
+<meta property="og:title" content="AYRO — g‘oyangizni ishlaydigan raqamli mahsulotga aylantiramiz">
+<meta property="og:description" content="Veb-saytlar, internet do‘konlar, CRM/ERP tizimlar va Telegram botlar. SEO, tezkor yuklanish, xavfsiz deploy va qo‘llab-quvvatlash.">
+<meta property="og:url" content="https://diyorbek1118.github.io/ayro/">
+<meta property="og:image" content="https://diyorbek1118.github.io/ayro/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AYRO — veb-saytlar, biznes tizimlar va raqamli mahsulotlar">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="dns-prefetch" href="https://abacus.jasoncameron.dev">
+<link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AYRO",
+  "slogan": "We turn ideas into digital products.",
+  "description": "Veb-sayt, internet do‘kon, CRM/ERP tizim, Telegram bot va veb-ilovalar yaratadigan dasturlash studiyasi.",
+  "url": "https://diyorbek1118.github.io/ayro/",
+  "image": "https://diyorbek1118.github.io/ayro/og.png",
+  "logo": "https://diyorbek1118.github.io/ayro/apple-touch-icon.png",
+  "telephone": "+998770561836",
+  "email": "sodikhovd@gmail.com",
+  "areaServed": { "@type": "Country", "name": "Uzbekistan" },
+  "sameAs": ["https://t.me/ddddfffz"],
+  "knowsAbout": ["Web development", "E-commerce", "CRM", "ERP", "Telegram bot", "SEO", "Laravel", "Vue.js", "React"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Xizmatlar",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Veb-saytlar" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Internet do‘kon va marketplace" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CRM, ERP va ombor tizimlari" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Veb-ilovalar va SaaS" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Telegram bot va mobil ilovalar" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maxsus dasturlash va API integratsiya" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Optimizatsiya va texnik qo‘llab-quvvatlash" } }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Sayt yoki tizim qancha turadi?", "acceptedAnswer": { "@type": "Answer", "text": "Narx loyiha hajmi va funksiyalarga bog‘liq. Qisqa suhbatdan so‘ng aniq narx va muddatni ish boshlanishidan oldin kelishib olamiz — keyin kutilmagan xarajat chiqmaydi." } },
+    { "@type": "Question", "name": "Qancha vaqtda tayyor bo‘ladi?", "acceptedAnswer": { "@type": "Answer", "text": "Visitka sayt tez tayyor bo‘ladi, internet do‘kon yoki CRM esa ko‘proq vaqt oladi. Aniq muddatni rejalashtirish bosqichida belgilaymiz va har bosqichda natijani ko‘rsatib boramiz." } },
+    { "@type": "Question", "name": "Saytni keyin o‘zim boshqara olamanmi?", "acceptedAnswer": { "@type": "Answer", "text": "Ha. Qulay admin panel orqali mahsulot, narx, matn va rasmlarni dasturchisiz o‘zingiz o‘zgartirasiz." } },
+    { "@type": "Question", "name": "Domen, hosting va deploy’ni kim qiladi?", "acceptedAnswer": { "@type": "Answer", "text": "Biz. Server sozlash, domen ulash, SSL sertifikat va deploy’ni o‘zimiz bajaramiz — siz tayyor, ishlab turgan saytni olasiz." } },
+    { "@type": "Question", "name": "Ishga tushgandan keyin nima bo‘ladi?", "acceptedAnswer": { "@type": "Answer", "text": "Qo‘llab-quvvatlashda davom etamiz: monitoring, xatolarni tuzatish, tezlikni oshirish va yangi funksiyalar qo‘shish." } },
+    { "@type": "Question", "name": "Menda sayt bor, lekin sekin ishlaydi. Yordam bera olasizmi?", "acceptedAnswer": { "@type": "Answer", "text": "Ha. Yangi sayt shart emas: tezlik, ma’lumotlar bazasi, texnik SEO va xavfsizlikni tekshirib, mavjud tizimni optimallashtiramiz." } }
+  ]
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-site" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.2l2.1 10.6a1.6 1.6 0 0 0 1.6 1.3h8.4a1.6 1.6 0 0 0 1.5-1.2L20.5 8H6.1"/><circle cx="9.5" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 3 7.5 12 12l9-4.5L12 3Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></symbol>
+    <symbol id="i-app" viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="9" rx="1.6"/><rect x="13.5" y="3" width="7.5" height="5" rx="1.6"/><rect x="13.5" y="11" width="7.5" height="10" rx="1.6"/><rect x="3" y="15" width="7.5" height="6" rx="1.6"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 3.5 2.8 10.7c-.8.3-.8 1.4 0 1.7l4.7 1.6 1.8 5.6c.2.7 1.1.9 1.6.4l2.7-2.6 4.6 3.4c.6.4 1.4.1 1.6-.6l3-15.1c.2-.9-.6-1.6-1.3-1.2Z"/><path d="m7.5 14 11-8-8.2 9.6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M13.5 4.5l-3 15"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2.5 4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8Z"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2.2"/><circle cx="9" cy="17" r="2.2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4.5-4.5"/></symbol>
+    <symbol id="i-grow" viewBox="0 0 24 24"><path d="M3 17.5 9 11.5l4 4 8-8"/><path d="M15 7.5h6v6"/></symbol>
+    <symbol id="i-phone-d" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+    <symbol id="i-support" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.6"/><path d="m5.7 5.7 3.8 3.8M14.5 14.5l3.8 3.8M18.3 5.7l-3.8 3.8M9.5 14.5l-3.8 3.8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.8c0 4.4 3.1 8.2 7.5 9.2 4.4-1 7.5-4.8 7.5-9.2V6L12 3Z"/><path d="m9 12 2.1 2.1L15.2 10"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-call" viewBox="0 0 24 24"><path d="M5.2 3.5h3.3l1.8 4.6-2.3 1.4a11.5 11.5 0 0 0 6.5 6.5l1.4-2.3 4.6 1.8v3.3a2 2 0 0 1-2.1 2A16.9 16.9 0 0 1 3.2 5.6a2 2 0 0 1 2-2.1Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.4"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#asosiy">Asosiy qismga o‘tish</a>
+
+<header class="header" id="header">
+  <div class="wrap header-in">
+    <a class="logo" href="#top" aria-label="AYRO — bosh sahifa">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#C8FF3D"/><path fill="#0A0A0B" fill-rule="evenodd" d="M32 12 51 52h-8.6l-3.5-8H25.1l-3.5 8H13L32 12Zm0 16.5L28.3 37h7.4L32 28.5Z"/></svg>
+      <span>AYRO</span>
+    </a>
+    <nav class="nav" aria-label="Asosiy menyu">
+      <a href="#xizmatlar">Xizmatlar</a>
+      <a href="#yechimlar">Yechimlar</a>
+      <a href="#jarayon">Jarayon</a>
+      <a href="#savollar">Savollar</a>
+      <a href="#aloqa">Aloqa</a>
+    </nav>
+    <a class="btn btn-accent btn-sm header-cta" href="#aloqa">Loyihani boshlash</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menyuni ochish"><span></span><span></span></button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobil menyu">
+    <a href="#xizmatlar">Xizmatlar</a>
+    <a href="#yechimlar">Yechimlar</a>
+    <a href="#jarayon">Jarayon</a>
+    <a href="#savollar">Savollar</a>
+    <a href="#aloqa">Aloqa</a>
+    <a class="btn btn-accent" href="https://t.me/ddddfffz" target="_blank" rel="noopener" data-track="telegram"><svg class="ic"><use href="#i-send"/></svg>Telegram’da yozish</a>
+  </nav>
+</header>
+
+<main id="asosiy">
+
+<section class="hero dark" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-top">
+      <p class="status"><span class="pulse" aria-hidden="true"></span>Yangi loyihalar qabul qilinmoqda</p>
+      <h1>G‘oyangizni <span class="hl">ishlaydigan</span> raqamli mahsulotga aylantiramiz</h1>
+    </div>
+    <div class="hero-copy">
+      <p class="lead">Veb-sayt, internet do‘kon, CRM tizim yoki Telegram bot — g‘oyadan tortib ishga tushirish va qo‘llab-quvvatlashgacha hammasini bitta jamoa qiladi.</p>
+      <div class="cta-row">
+        <a class="btn btn-accent btn-lg" href="#aloqa">Loyihani boshlash<svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost btn-lg" href="https://t.me/ddddfffz" target="_blank" rel="noopener" data-track="telegram"><svg class="ic"><use href="#i-send"/></svg>Telegram’da yozish</a>
+      </div>
+      <ul class="trust">
+        <li><svg class="ic"><use href="#i-check"/></svg>Bepul konsultatsiya</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Narx va muddat oldindan kelishiladi</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Ishga tushgandan keyin ham yoningizdamiz</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="term">
+        <div class="term-bar"><i></i><i></i><i></i><span>deploy — production</span></div>
+        <div class="term-body">
+          <p class="t-cmd" style="--d:0"><span class="t-pr">$</span> ayro deploy --production</p>
+          <p style="--d:1"><span class="t-ok">✓</span> Build<span class="t-dim">1.4s</span></p>
+          <p style="--d:2"><span class="t-ok">✓</span> SEO audit<span class="t-dim">o‘tdi</span></p>
+          <p style="--d:3"><span class="t-ok">✓</span> SSL sertifikat<span class="t-dim">faol</span></p>
+          <p style="--d:4"><span class="t-ok">✓</span> Kesh va CDN<span class="t-dim">yoqildi</span></p>
+          <p style="--d:5"><span class="t-ok">✓</span> Server<span class="t-dim">online</span></p>
+          <p class="t-live" style="--d:6"><span class="t-arrow">→</span> saytingiz.uz <b>ishga tushdi</b><span class="caret"></span></p>
+        </div>
+      </div>
+      <div class="float float-a">
+        <p class="float-t">Sifat nazorati</p>
+        <div class="rings">
+          <div class="ring"><span><svg class="ic"><use href="#i-check"/></svg></span><em>Tezlik</em></div>
+          <div class="ring"><span><svg class="ic"><use href="#i-check"/></svg></span><em>SEO</em></div>
+          <div class="ring"><span><svg class="ic"><use href="#i-check"/></svg></span><em>Mobil</em></div>
+          <div class="ring"><span><svg class="ic"><use href="#i-check"/></svg></span><em>Xavfsizlik</em></div>
+        </div>
+      </div>
+      <div class="float float-b">
+        <span class="tg"><svg class="ic"><use href="#i-send"/></svg></span>
+        <div>
+          <p class="n-t">Yangi buyurtma #1048</p>
+          <p class="n-s">450 000 so‘m · Payme orqali to‘landi</p>
+        </div>
+        <span class="n-time">hozir</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-label="Asosiy yo‘nalishlar">
+  <div class="marquee-track">
+    <ul>
+      <li>SEO optimizatsiya</li><li>Deploy va hosting</li><li>SSL sertifikat</li><li>Responsive dizayn</li><li>API integratsiya</li><li>Payme · Click</li><li>Telegram Mini App</li><li>CRM · ERP</li><li>Core Web Vitals</li><li>Server monitoring</li><li>Redis kesh</li><li>CI/CD</li><li>Backup</li>
+    </ul>
+    <ul aria-hidden="true">
+      <li>SEO optimizatsiya</li><li>Deploy va hosting</li><li>SSL sertifikat</li><li>Responsive dizayn</li><li>API integratsiya</li><li>Payme · Click</li><li>Telegram Mini App</li><li>CRM · ERP</li><li>Core Web Vitals</li><li>Server monitoring</li><li>Redis kesh</li><li>CI/CD</li><li>Backup</li>
+    </ul>
+  </div>
+</div>
+
+<section class="section about" id="haqida">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow reveal">Biz haqimizda</p>
+        <h2 class="h2 reveal">Chiroyli sayt yetarli emas. U biznesingiz uchun <span class="mark">ishlashi</span> kerak.</h2>
+      </div>
+      <div class="about-text">
+        <p class="reveal">AYRO — g‘oyalarni ishlaydigan raqamli mahsulotlarga aylantiradigan dasturlash studiyasi. Oddiy landing sahifadan tortib CRM, ERP, marketplace va biznesingizga moslab yozilgan platformalargacha yaratamiz.</p>
+        <p class="reveal">Har bir loyihani biznes vazifangizdan kelib chiqib rejalashtiramiz: mahsulot tez ishlaydi, barqaror, xavfsiz, telefonda qulay va kelajakda kengaytirishga tayyor bo‘ladi.</p>
+      </div>
+    </div>
+    <ul class="pillars">
+      <li class="reveal"><svg class="ic"><use href="#i-zap"/></svg><h3>Tez</h3><p>Sahifalar bir zumda ochiladi — mijoz kutib qolmaydi.</p></li>
+      <li class="reveal"><svg class="ic"><use href="#i-shield"/></svg><h3>Xavfsiz</h3><p>HTTPS, himoyalangan formalar va zaxira nusxalar.</p></li>
+      <li class="reveal"><svg class="ic"><use href="#i-grow"/></svg><h3>O‘sishga tayyor</h3><p>Biznesingiz kengaygani sari tizim ham kengayadi.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section services" id="xizmatlar">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow reveal">Xizmatlar</p>
+      <h2 class="h2 reveal">Biznesingiz uchun 7 yo‘nalish</h2>
+      <p class="sub reveal">G‘oya bosqichidami, ishlab turgan biznesmi yoki eski tizimni yangilash kerakmi — mos yechimni topamiz.</p>
+    </div>
+    <ul class="svc-grid">
+      <li class="svc reveal">
+        <span class="svc-no">01</span>
+        <span class="svc-ic"><svg class="ic"><use href="#i-site"/></svg></span>
+        <h3>Veb-saytlar</h3>
+        <p>Landing sahifa, visitka, korporativ va katalog saytlar. Tez yuklanadi, telefonda qulay, Google’da topiladi.</p>
+        <ul class="tags"><li>Landing</li><li>SEO</li><li>Responsive</li></ul>
+      </li>
+      <li class="svc reveal">
+        <span class="svc-no">02</span>
+        <span class="svc-ic"><svg class="ic"><use href="#i-cart"/></svg></span>
+        <h3>Internet do‘kon va marketplace</h3>
+        <p>Katalog, filtr, qidiruv, savat, onlayn to‘lov, yetkazib berish, promo-kod va qulay admin panel.</p>
+        <ul class="tags"><li>Payme · Click</li><li>Savat</li><li>Admin panel</li></ul>
+      </li>
+      <li class="svc reveal">
+        <span class="svc-no">03</span>
+        <span class="svc-ic"><svg class="ic"><use href="#i-layers"/></svg></span>
+        <h3>Biznes tizimlar</h3>
+        <p>CRM, ERP, ombor (WMS), KPI va HRM: mijozlar, savdo, xodimlar, ombor va hisobotlar bitta tizimda.</p>
+        <ul class="tags"><li>CRM</li><li>ERP</li><li>WMS</li></ul>
+      </li>
+      <li class="svc reveal">
+        <span class="svc-no">04</span>
+        <span class="svc-ic"><svg class="ic"><use href="#i-app"/></svg></span>
+        <h3>Veb-ilovalar va SaaS</h3>
+        <p>Shaxsiy kabinet, bron qilish, onlayn ta’lim (LMS), dashboard va murakkab biznes mantiqli platformalar.</p>
+        <ul class="tags"><li>SaaS</li><li>Rollar</li><li>Obuna</li></ul>
+      </li>
+      <li class="svc reveal">
+        <span class="svc-no">05</span>
+        <span class="svc-ic"><svg class="ic"><use href="#i-send"/></svg></span>
+        <h3>Telegram va mobil</h3>
+        <p>Telegram bot, Telegram Mini App va mobil ilovalar uchun backend: buyurtma, katalog, bildirishnoma, to‘lov.</p>
+        <ul class="tags"><li>Telegram bot</li><li>Mini App</li><li>API</li></ul>
+      </li>
+      <li class="svc reveal">
+        <span class="svc-no">06</span>
+        <span class="svc-ic"><svg class="ic"><use href="#i-code"/></svg></span>
+        <h3>Maxsus dasturlash</h3>
+        <p>Tayyor yechim mos kelmasa — noldan yozamiz. API integratsiya, admin panel va mavjud tizimga yangi modullar.</p>
+        <ul class="tags"><li>API integratsiya</li><li>Custom</li></ul>
+      </li>
+      <li class="svc reveal">
+        <span class="svc-no">07</span>
+        <span class="svc-ic"><svg class="ic"><use href="#i-zap"/></svg></span>
+        <h3>Optimizatsiya va qo‘llab-quvvatlash</h3>
+        <p>Sayt sekinmi yoki xato beryaptimi? Tezlik, ma’lumotlar bazasi, texnik SEO, xavfsizlik, server va deploy.</p>
+        <ul class="tags"><li>Tezlik</li><li>Texnik SEO</li><li>Security</li></ul>
+      </li>
+      <li class="svc svc-cta reveal">
+        <h3>Qaysi biri kerakligini bilmayapsizmi?</h3>
+        <p>Vazifangizni yozing — eng to‘g‘ri yechimni birga tanlaymiz.</p>
+        <a class="btn btn-accent" href="#aloqa">Bepul maslahat olish<svg class="ic"><use href="#i-arrow"/></svg></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section solutions dark" id="yechimlar">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow reveal">Yechimlar</p>
+      <h2 class="h2 reveal">Nimalar quramiz</h2>
+      <p class="sub reveal">Eng ko‘p so‘raladigan yechimlar. Har biri biznesingizga moslab, noldan loyihalanadi.</p>
+    </div>
+    <div class="sol-grid">
+      <article class="sol reveal">
+        <div class="mk mk-shop" aria-hidden="true">
+          <div class="mk-bar"><i></i><i></i><i></i><span>do‘kon.uz</span><b class="mk-cart"><svg class="ic"><use href="#i-cart"/></svg>3</b></div>
+          <div class="mk-products">
+            <div class="mk-p"><div class="mk-img a"></div><div class="mk-l"></div><div class="mk-price">189 000</div></div>
+            <div class="mk-p"><div class="mk-img b"></div><div class="mk-l"></div><div class="mk-price">249 000</div></div>
+            <div class="mk-p"><div class="mk-img c"></div><div class="mk-l"></div><div class="mk-price">99 000</div></div>
+          </div>
+          <div class="mk-pay"><span>Payme</span><span>Click</span><span class="ok"><svg class="ic"><use href="#i-check"/></svg>To‘lov qabul qilindi</span></div>
+        </div>
+        <h3>Internet do‘kon</h3>
+        <p>Mahsulotlaringizni kechayu kunduz sotadigan onlayn do‘kon.</p>
+        <ul class="ticks"><li>Katalog, filtr va qidiruv</li><li>Payme va Click orqali to‘lov</li><li>Buyurtma va yetkazib berish</li><li>Qulay admin panel</li></ul>
+      </article>
+      <article class="sol reveal">
+        <div class="mk mk-crm" aria-hidden="true">
+          <div class="mk-side"><b></b><i class="on"></i><i></i><i></i><i></i><i></i></div>
+          <div class="mk-main">
+            <div class="mk-kpis">
+              <div><span>Savdo</span><b>128 mln</b><em>+12%</em></div>
+              <div><span>Buyurtma</span><b>1 204</b><em>+8%</em></div>
+              <div><span>Omborda</span><b>8 530</b><em>dona</em></div>
+            </div>
+            <div class="mk-chart"><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:46%"></i><i style="--h:64%"></i><i style="--h:58%"></i><i style="--h:76%"></i><i style="--h:88%"></i></div>
+          </div>
+        </div>
+        <h3>CRM va ombor tizimi</h3>
+        <p>Savdo, mijozlar va ombor — bitta ekranda, real vaqtda.</p>
+        <ul class="ticks"><li>Mijozlar va savdo tarixi</li><li>Ombor qoldig‘i real vaqtda</li><li>Xodimlar KPI</li><li>Avtomatik hisobotlar</li></ul>
+      </article>
+      <article class="sol reveal">
+        <div class="mk mk-tg" aria-hidden="true">
+          <div class="mk-tg-head"><span class="av">D</span><div><b>Do‘kon bot</b><em>bot</em></div></div>
+          <div class="mk-chat">
+            <p class="bub in">Assalomu alaykum! Kategoriyani tanlang:</p>
+            <div class="kb"><span>Kiyimlar</span><span>Poyabzal</span><span>Aksessuar</span><span>Savat (2)</span></div>
+            <p class="bub out">Poyabzal</p>
+            <p class="bub in">To‘lov usulini tanlang:</p>
+            <div class="kb two"><span>Payme</span><span>Click</span></div>
+          </div>
+        </div>
+        <h3>Telegram bot va Mini App</h3>
+        <p>Mijozlaringiz qayerda bo‘lsa — o‘sha yerda sotish.</p>
+        <ul class="ticks"><li>Buyurtma qabul qilish</li><li>Katalog va onlayn to‘lov</li><li>Avtomatik bildirishnomalar</li><li>Admin uchun statistika</li></ul>
+      </article>
+      <article class="sol reveal">
+        <div class="mk mk-land" aria-hidden="true">
+          <div class="mk-bar"><i></i><i></i><i></i><span>kompaniya.uz</span></div>
+          <div class="mk-page">
+            <div class="mk-nav"><b></b><i></i><i></i><i></i><s></s></div>
+            <div class="mk-hero"><div class="mk-h1"></div><div class="mk-h1 short"></div><div class="mk-txt"></div><div class="mk-btn"></div></div>
+            <div class="mk-img-big"></div>
+          </div>
+          <div class="mk-phone"><div class="mk-h1"></div><div class="mk-txt"></div><div class="mk-btn"></div><div class="mk-img-sm"></div></div>
+        </div>
+        <h3>Kompaniya sayti</h3>
+        <p>Ishonch uyg‘otadigan va Google’da topiladigan sayt.</p>
+        <ul class="ticks"><li>Zamonaviy, noyob dizayn</li><li>SEO va Google Analytics</li><li>Ariza formasi</li><li>Domen, SSL va hosting</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section projects" id="loyihalar" hidden>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Loyihalar</p>
+      <h2 class="h2">Tanlangan loyihalar</h2>
+    </div>
+    <div class="proj-list" id="proj-list"></div>
+  </div>
+</section>
+
+<section class="section why" id="afzalliklar">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow reveal">Afzalliklar</p>
+      <h2 class="h2 reveal">Nega aynan AYRO?</h2>
+    </div>
+    <ul class="why-grid">
+      <li class="reveal"><span class="why-ic"><svg class="ic"><use href="#i-sliders"/></svg></span><h3>Biznesingizga moslab</h3><p>Jarayoningizga mos kelmaydigan tayyor shablonni majburlamaymiz. Kerak bo‘lsa, maxsus yechim yozamiz.</p></li>
+      <li class="reveal"><span class="why-ic"><svg class="ic"><use href="#i-zap"/></svg></span><h3>Tezlik birinchi o‘rinda</h3><p>Optimallashtirilgan backend va ma’lumotlar bazasi, kesh va production-ready deploy.</p></li>
+      <li class="reveal"><span class="why-ic"><svg class="ic"><use href="#i-search"/></svg></span><h3>SEO’ga tayyor</h3><p>Semantik HTML, meta teglar, sitemap, Open Graph va Core Web Vitals — Google saytingizni oson topadi.</p></li>
+      <li class="reveal"><span class="why-ic"><svg class="ic"><use href="#i-layers"/></svg></span><h3>Kengayadigan arxitektura</h3><p>Biznes o‘sgani sari tizimni qaytadan yozish shart emas — yangi modullar qo‘shiladi.</p></li>
+      <li class="reveal"><span class="why-ic"><svg class="ic"><use href="#i-phone-d"/></svg></span><h3>Har qanday ekranda</h3><p>Kompyuter, planshet va telefonda birdek qulay interfeys.</p></li>
+      <li class="reveal"><span class="why-ic"><svg class="ic"><use href="#i-support"/></svg></span><h3>Ishga tushgandan keyin ham</h3><p>Monitoring, xatolarni tuzatish, optimizatsiya va yangi funksiyalar.</p></li>
+    </ul>
+    <div class="tech reveal">
+      <p class="tech-t">Texnologiyalar</p>
+      <ul><li>PHP</li><li>Laravel</li><li>Vue.js</li><li>React</li><li>Flutter</li><li>MySQL</li><li>PostgreSQL</li><li>Redis</li><li>Docker</li><li>Nginx</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section process" id="jarayon">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow reveal">Jarayon</p>
+      <h2 class="h2 reveal">Ish qanday boradi</h2>
+      <p class="sub reveal">Har bosqichda natijani ko‘rib borasiz — kutilmagan holatlar bo‘lmaydi.</p>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><span>01</span><h3>Tahlil</h3><p>Maqsad va talablarni birga aniqlaymiz.</p></li>
+      <li class="reveal"><span>02</span><h3>Rejalashtirish</h3><p>Funksiyalar, tuzilma, narx va muddat.</p></li>
+      <li class="reveal"><span>03</span><h3>Dizayn</h3><p>UX/UI va barcha ekranlarga mos interfeys.</p></li>
+      <li class="reveal"><span>04</span><h3>Dasturlash</h3><p>Frontend, backend, baza va integratsiyalar.</p></li>
+      <li class="reveal"><span>05</span><h3>Test</h3><p>Funksional, tezlik va xavfsizlik tekshiruvi.</p></li>
+      <li class="reveal"><span>06</span><h3>Ishga tushirish</h3><p>Server, domen, SSL va deploy.</p></li>
+      <li class="reveal"><span>07</span><h3>Qo‘llab-quvvatlash</h3><p>Monitoring, yangilanish va rivojlantirish.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section faq" id="savollar">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <p class="eyebrow reveal">Savollar</p>
+      <h2 class="h2 reveal">Ko‘p beriladigan savollar</h2>
+      <p class="sub reveal">Javob topilmadimi? Telegram’da yozing — tushunarli qilib tushuntirib beramiz.</p>
+      <a class="btn btn-dark reveal" href="https://t.me/ddddfffz" target="_blank" rel="noopener" data-track="telegram"><svg class="ic"><use href="#i-send"/></svg>Savol berish</a>
+    </div>
+    <div class="faq-list">
+      <details class="reveal"><summary>Sayt yoki tizim qancha turadi?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Narx loyiha hajmi va funksiyalarga bog‘liq. Qisqa suhbatdan so‘ng aniq narx va muddatni ish boshlanishidan oldin kelishib olamiz — keyin kutilmagan xarajat chiqmaydi.</p></details>
+      <details class="reveal"><summary>Qancha vaqtda tayyor bo‘ladi?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Visitka sayt tez tayyor bo‘ladi, internet do‘kon yoki CRM esa ko‘proq vaqt oladi. Aniq muddatni rejalashtirish bosqichida belgilaymiz va har bosqichda natijani ko‘rsatib boramiz.</p></details>
+      <details class="reveal"><summary>Saytni keyin o‘zim boshqara olamanmi?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Ha. Qulay admin panel orqali mahsulot, narx, matn va rasmlarni dasturchisiz o‘zingiz o‘zgartirasiz.</p></details>
+      <details class="reveal"><summary>Domen, hosting va deploy’ni kim qiladi?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Biz. Server sozlash, domen ulash, SSL sertifikat va deploy’ni o‘zimiz bajaramiz — siz tayyor, ishlab turgan saytni olasiz.</p></details>
+      <details class="reveal"><summary>Ishga tushgandan keyin nima bo‘ladi?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Qo‘llab-quvvatlashda davom etamiz: monitoring, xatolarni tuzatish, tezlikni oshirish va yangi funksiyalar qo‘shish.</p></details>
+      <details class="reveal"><summary>Menda sayt bor, lekin sekin ishlaydi. Yordam bera olasizmi?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Ha. Yangi sayt shart emas: tezlik, ma’lumotlar bazasi, texnik SEO va xavfsizlikni tekshirib, mavjud tizimni optimallashtiramiz.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section contact dark" id="aloqa">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap contact-grid">
+    <div class="contact-copy">
+      <p class="eyebrow reveal">Aloqa</p>
+      <h2 class="h2 reveal">Loyihangiz bormi? <span class="hl">Keling, birga quramiz.</span></h2>
+      <p class="sub reveal">Veb-sayt, biznes tizim yoki boshqa raqamli mahsulot kerakmi? Loyiha haqida qisqacha yozing — qanday amalga oshirish mumkinligini ko‘rib chiqib, siz bilan bog‘lanamiz.</p>
+      <ul class="clinks reveal">
+        <li><a href="https://t.me/ddddfffz" target="_blank" rel="noopener" data-track="telegram"><span class="cl-ic"><svg class="ic"><use href="#i-send"/></svg></span><span><em>Telegram · eng tez javob</em><b>@ddddfffz</b></span><svg class="ic cl-go"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="tel:+998770561836" data-track="phone"><span class="cl-ic"><svg class="ic"><use href="#i-call"/></svg></span><span><em>Telefon</em><b>+998 77 056 18 36</b></span><svg class="ic cl-go"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="mailto:sodikhovd@gmail.com" data-track="email"><span class="cl-ic"><svg class="ic"><use href="#i-mail"/></svg></span><span><em>Email</em><b>sodikhovd@gmail.com</b></span><svg class="ic cl-go"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+    </div>
+
+    <div class="form-card reveal">
+      <form id="lead-form" novalidate>
+        <h3>Ariza qoldiring</h3>
+        <p class="form-note">Bir necha daqiqada to‘ldiriladi. Biz o‘zimiz bog‘lanamiz.</p>
+        <div class="field">
+          <label for="f-name">Ismingiz</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Masalan: Aziz" maxlength="80" aria-describedby="e-name">
+          <p class="err" id="e-name"></p>
+        </div>
+        <div class="field">
+          <label for="f-contact">Telefon yoki Telegram</label>
+          <input id="f-contact" name="contact" type="text" inputmode="text" autocomplete="tel" placeholder="+998 90 123 45 67 yoki @username" maxlength="60" aria-describedby="e-contact">
+          <p class="err" id="e-contact"></p>
+        </div>
+        <div class="field">
+          <label for="f-service">Qaysi xizmat kerak?</label>
+          <select id="f-service" name="service">
+            <option>Hali aniq emas — maslahat kerak</option>
+            <option>Veb-sayt</option>
+            <option>Internet do‘kon / marketplace</option>
+            <option>CRM / ERP / ombor tizimi</option>
+            <option>Veb-ilova / SaaS</option>
+            <option>Telegram bot / mobil ilova</option>
+            <option>Maxsus dasturlash</option>
+            <option>Optimizatsiya va qo‘llab-quvvatlash</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-message">Loyiha haqida qisqacha</label>
+          <textarea id="f-message" name="message" rows="4" maxlength="2000" placeholder="Masalan: kiyim do‘konimiz uchun Payme to‘lovli internet do‘kon kerak" aria-describedby="e-message"></textarea>
+          <p class="err" id="e-message"></p>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="f-web">Veb-sayt</label><input id="f-web" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+        <button class="btn btn-accent btn-lg btn-block" type="submit"><span class="btn-label">Ariza yuborish</span><svg class="ic"><use href="#i-arrow"/></svg></button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="form-legal">Ma’lumotlaringiz faqat siz bilan bog‘lanish uchun ishlatiladi.</p>
+      </form>
+      <div class="form-done" hidden>
+        <span class="done-ic"><svg class="ic"><use href="#i-check"/></svg></span>
+        <h3>Rahmat! Arizangiz qabul qilindi.</h3>
+        <p>Tez orada siz bilan bog‘lanamiz. Shoshilinch bo‘lsa — Telegram’da yozing.</p>
+        <a class="btn btn-ghost" href="https://t.me/ddddfffz" target="_blank" rel="noopener" data-track="telegram"><svg class="ic"><use href="#i-send"/></svg>@ddddfffz</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer dark">
+  <div class="wrap footer-grid">
+    <div class="f-brand">
+      <a class="logo" href="#top" aria-label="AYRO — bosh sahifa">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#C8FF3D"/><path fill="#0A0A0B" fill-rule="evenodd" d="M32 12 51 52h-8.6l-3.5-8H25.1l-3.5 8H13L32 12Zm0 16.5L28.3 37h7.4L32 28.5Z"/></svg>
+        <span>AYRO</span>
+      </a>
+      <p>G‘oyadan ishlaydigan mahsulotgacha. Veb-saytlar, biznes tizimlar va raqamli mahsulotlar.</p>
+    </div>
+    <div>
+      <p class="f-t">Bo‘limlar</p>
+      <ul><li><a href="#xizmatlar">Xizmatlar</a></li><li><a href="#yechimlar">Yechimlar</a></li><li><a href="#jarayon">Jarayon</a></li><li><a href="#savollar">Savollar</a></li><li><a href="#aloqa">Aloqa</a></li></ul>
+    </div>
+    <div>
+      <p class="f-t">Xizmatlar</p>
+      <ul><li>Veb-saytlar</li><li>Internet do‘konlar</li><li>CRM, ERP, WMS</li><li>Telegram botlar</li><li>Optimizatsiya</li></ul>
+    </div>
+    <div>
+      <p class="f-t">Aloqa</p>
+      <ul>
+        <li><a href="https://t.me/ddddfffz" target="_blank" rel="noopener" data-track="telegram">Telegram: @ddddfffz</a></li>
+        <li><a href="tel:+998770561836" data-track="phone">+998 77 056 18 36</a></li>
+        <li><a href="mailto:sodikhovd@gmail.com" data-track="email">sodikhovd@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap f-bottom">
+    <p>© <span data-year>2026</span> AYRO. Barcha huquqlar himoyalangan.</p>
+    <a href="#top">Yuqoriga ↑</a>
+  </div>
+</footer>
+
+<div class="mbar" aria-hidden="true">
+  <a class="btn btn-accent" href="https://t.me/ddddfffz" target="_blank" rel="noopener" data-track="telegram" tabindex="-1"><svg class="ic"><use href="#i-send"/></svg>Telegram’da yozish</a>
+  <a class="btn btn-call" href="tel:+998770561836" data-track="phone" tabindex="-1" aria-label="Qo‘ng‘iroq qilish"><svg class="ic"><use href="#i-call"/></svg></a>
+</div>
+</body>
+</html>
