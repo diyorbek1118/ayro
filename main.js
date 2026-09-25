@@ -4,7 +4,6 @@
   const NS = 'ayro-dx0dqzbxkl';
   const API = 'https://abacus.jasoncameron.dev';
   const SOURCES = ['banner', 'qr', 'telegram', 'instagram', 'facebook', 'flyer'];
-  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sodikhovd@gmail.com';
   const LEAD_ENDPOINT = 'api/lead';
   const loadedAt = Date.now();
 
@@ -206,25 +205,8 @@
         const json = await response.json().catch(() => ({}));
         return response.ok && json.ok === true;
       };
-      const sendEmail = async () => {
-        const response = await fetch(FORM_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({
-            Ism: data.name.trim(),
-            Aloqa: data.contact.trim(),
-            Xizmat: data.service,
-            Loyiha: data.message.trim(),
-            _subject: `AYRO saytidan yangi ariza — ${data.name.trim()}`,
-            _template: 'table',
-            _captcha: 'false',
-          }),
-        });
-        const json = await response.json().catch(() => ({}));
-        return response.ok && String(json.success) === 'true';
-      };
       try {
-        const delivered = await sendTelegram().catch(() => false) || await sendEmail();
+        const delivered = await sendTelegram();
         if (!delivered) throw new Error('rejected');
         store('local', 'ayro_sent', String(Date.now()));
         hit('c-form');
