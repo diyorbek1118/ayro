@@ -1,7 +1,7 @@
 (() => {
   const PROJECTS = [];
 
-  const NS = 'ayro-dx0dqzbxkl';
+  const NS = 'ayro-20260925-n4x7q2';
   const API = 'https://abacus.jasoncameron.dev';
   const SOURCES = ['banner', 'qr', 'telegram', 'instagram', 'facebook', 'flyer'];
   const LEAD_ENDPOINT = 'api/lead';
