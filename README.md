@@ -3,7 +3,7 @@
 AYRO studiyasining bir sahifali sayti: xizmatlar, yechimlar, ish jarayoni, savollar va ariza formasi.
 Framework yo‘q — oddiy HTML, CSS va JavaScript. Build qadami kerak emas.
 
-Sayt: https://diyorbek1118.github.io/ayro/
+Sayt: https://ayro.pages.dev/ (Cloudflare Pages). GitHub Pages’dagi nusxa: https://diyorbek1118.github.io/ayro/
 
 ## Fayllar
 
@@ -18,7 +18,7 @@ Sayt: https://diyorbek1118.github.io/ayro/
 
 ## Statistika
 
-`https://diyorbek1118.github.io/ayro/stat/` — parol bilan kiriladi. Ko‘rsatiladi:
+`https://ayro.pages.dev/stat/` — parol bilan kiriladi. Ko‘rsatiladi:
 jami va noyob tashriflar, bugungi tashriflar, 14 kunlik grafik, Telegram/telefon/email tugmalari
 bosilishi, yuborilgan arizalar va qaysi havola orqali kelishgani.
 
@@ -56,6 +56,11 @@ const PROJECTS = [
 
 ## O‘z domeningizni ulash
 
-Domen (masalan `ayro.uz`) sotib olingach: repo **Settings → Pages → Custom domain** ga domenni yozing
-va DNS’da `CNAME` yozuvini `diyorbek1118.github.io` ga yo‘naltiring. Keyin `index.html`, `sitemap.xml`
-va `robots.txt` dagi manzillarni yangi domenga almashtiring.
+Domen (masalan `ayro.uz`) sotib olingach: Cloudflare dashboard → **Workers & Pages → ayro → Custom domains**
+orqali ulang. Keyin `index.html`, `sitemap.xml` va `robots.txt` dagi manzillarni yangi domenga almashtiring.
+
+## Yangilash (deploy)
+
+```bash
+npx wrangler pages deploy . --project-name ayro --branch main
+```

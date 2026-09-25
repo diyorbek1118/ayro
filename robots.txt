@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://diyorbek1118.github.io/ayro/sitemap.xml
+Sitemap: https://ayro.pages.dev/sitemap.xml
