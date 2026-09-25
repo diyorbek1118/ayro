@@ -31,9 +31,22 @@ Hisoblagich bepul `abacus.jasoncameron.dev` servisida ishlaydi.
 
 ## Ariza formasi
 
-Arizalar FormSubmit orqali `sodikhovd@gmail.com` ga keladi. Birinchi arizadan keyin FormSubmit
-shu pochtaga tasdiqlash xati yuboradi — undagi **Activate Form** tugmasini bosish kerak.
-Tasdiqlanmaguncha arizalar yetib bormaydi, sayt esa mijozga Telegram orqali yozishni taklif qiladi.
+Arizalar avval Telegram botga yuboriladi (`functions/api/lead.js`, Cloudflare Pages Function).
+Bot sozlanmagan yoki Telegram javob bermasa, zaxira sifatida FormSubmit orqali `sodikhovd@gmail.com` ga ketadi
+(FormSubmit birinchi xatdagi **Activate Form** tugmasi bilan bir marta faollashtiriladi).
+
+Bot sozlamalari Cloudflare’da yashirin saqlanadi, kodda token yo‘q:
+
+```bash
+npx wrangler pages secret put TELEGRAM_BOT_TOKEN --project-name ayro
+npx wrangler pages secret put TELEGRAM_CHAT_ID --project-name ayro
+```
+
+`TELEGRAM_CHAT_ID` — arizani oladigan Telegram ID (bir nechta bo‘lsa vergul bilan). Botga oldin **Start** bosilgan
+bo‘lishi kerak. Sozlamadan keyin saytni qayta deploy qiling.
+
+Funksiya himoyasi: boshqa saytdan kelgan so‘rov, honeypot, 2,5 soniyadan tez yuborilgan forma va bir IP’dan
+10 daqiqada 3 tadan ortiq ariza rad etiladi.
 
 ## Real loyihalarni qo‘shish
 
@@ -61,6 +74,8 @@ orqali ulang. Keyin `index.html`, `sitemap.xml` va `robots.txt` dagi manzillarni
 
 ## Yangilash (deploy)
 
+Repo papkasidan (Functions `functions/` dan olinadi), statik fayllarni `.git`, `functions`, README’siz nusxada:
+
 ```bash
-npx wrangler pages deploy . --project-name ayro --branch main
+npx wrangler pages deploy <nusxa-papka> --project-name ayro --branch main
 ```

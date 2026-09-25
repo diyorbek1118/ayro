@@ -5,6 +5,8 @@
   const API = 'https://abacus.jasoncameron.dev';
   const SOURCES = ['banner', 'qr', 'telegram', 'instagram', 'facebook', 'flyer'];
   const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sodikhovd@gmail.com';
+  const LEAD_ENDPOINT = 'api/lead';
+  const loadedAt = Date.now();
 
   const root = document.documentElement;
   root.classList.add('js');
@@ -187,7 +189,24 @@
       button.classList.add('loading');
       button.disabled = true;
       label.textContent = 'Yuborilmoqda…';
-      try {
+      const source = (new URLSearchParams(location.search).get('src') || store('session', 'ayro_src') || '').toLowerCase();
+      const sendTelegram = async () => {
+        const response = await fetch(LEAD_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: data.name.trim(),
+            contact: data.contact.trim(),
+            service: data.service,
+            message: data.message.trim(),
+            source: SOURCES.includes(source) ? source : '',
+            elapsed: Date.now() - loadedAt,
+          }),
+        });
+        const json = await response.json().catch(() => ({}));
+        return response.ok && json.ok === true;
+      };
+      const sendEmail = async () => {
         const response = await fetch(FORM_ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
@@ -202,7 +221,11 @@
           }),
         });
         const json = await response.json().catch(() => ({}));
-        if (!response.ok || String(json.success) !== 'true') throw new Error('rejected');
+        return response.ok && String(json.success) === 'true';
+      };
+      try {
+        const delivered = await sendTelegram().catch(() => false) || await sendEmail();
+        if (!delivered) throw new Error('rejected');
         store('local', 'ayro_sent', String(Date.now()));
         hit('c-form');
         form.reset();
