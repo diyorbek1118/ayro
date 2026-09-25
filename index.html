@@ -441,22 +441,22 @@
         </div>
         <div class="field">
           <label for="f-contact">Telefon yoki Telegram</label>
-          <input id="f-contact" name="contact" type="text" inputmode="text" autocomplete="tel" placeholder="+998 90 123 45 67 yoki @username" maxlength="60" aria-describedby="e-contact">
+          <input id="f-contact" name="contact" type="text" inputmode="text" autocomplete="tel" placeholder="+998 90 123 45 67" maxlength="60" aria-describedby="e-contact">
           <p class="err" id="e-contact"></p>
         </div>
-        <div class="field">
-          <label for="f-service">Qaysi xizmat kerak?</label>
-          <select id="f-service" name="service">
-            <option>Hali aniq emas — maslahat kerak</option>
-            <option>Veb-sayt</option>
-            <option>Internet do‘kon / marketplace</option>
-            <option>CRM / ERP / ombor tizimi</option>
-            <option>Veb-ilova / SaaS</option>
-            <option>Telegram bot / mobil ilova</option>
-            <option>Maxsus dasturlash</option>
-            <option>Optimizatsiya va qo‘llab-quvvatlash</option>
-          </select>
-        </div>
+        <fieldset class="field chips-field">
+          <legend>Qaysi xizmat kerak?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="service" value="Hali aniq emas — maslahat kerak" checked><span>Hali aniq emas</span></label>
+            <label class="chip"><input type="radio" name="service" value="Veb-sayt"><span>Veb-sayt</span></label>
+            <label class="chip"><input type="radio" name="service" value="Internet do‘kon / marketplace"><span>Internet do‘kon</span></label>
+            <label class="chip"><input type="radio" name="service" value="CRM / ERP / ombor tizimi"><span>CRM · ERP · ombor</span></label>
+            <label class="chip"><input type="radio" name="service" value="Veb-ilova / SaaS"><span>Veb-ilova · SaaS</span></label>
+            <label class="chip"><input type="radio" name="service" value="Telegram bot / mobil ilova"><span>Telegram bot · mobil</span></label>
+            <label class="chip"><input type="radio" name="service" value="Maxsus dasturlash"><span>Maxsus dasturlash</span></label>
+            <label class="chip"><input type="radio" name="service" value="Optimizatsiya va qo‘llab-quvvatlash"><span>Optimizatsiya</span></label>
+          </div>
+        </fieldset>
         <div class="field">
           <label for="f-message">Loyiha haqida qisqacha</label>
           <textarea id="f-message" name="message" rows="4" maxlength="2000" placeholder="Masalan: kiyim do‘konimiz uchun Payme to‘lovli internet do‘kon kerak" aria-describedby="e-message"></textarea>

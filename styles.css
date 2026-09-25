@@ -60,7 +60,7 @@ button { -webkit-appearance: none; appearance: none; }
 
 .ic { width: 1.25em; height: 1.25em; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
-.dark { background: var(--ink); color: #fff; }
+.dark { background: var(--ink); color: #fff; color-scheme: dark; }
 
 .skip { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--accent); color: var(--ink); padding: 10px 16px; border-radius: 10px; font-weight: 600; }
 .skip:focus { top: 12px; }
@@ -170,6 +170,16 @@ button { -webkit-appearance: none; appearance: none; }
   .hero-grid { grid-template-columns: 1fr 1fr; column-gap: 64px; row-gap: 20px; }
   .hero-top { grid-column: 1 / -1; }
   .hero-visual { justify-self: end; }
+}
+@media (max-width: 420px) {
+  .mk { padding: 12px; }
+  .mk-side { width: 36px; }
+  .mk-kpis div { padding: 8px; }
+  .mk-kpis b { font-size: 12.5px; }
+  .mk-kpis span, .mk-kpis em { font-size: 9.5px; }
+  .kb span { font-size: 9.5px; padding: 6px 2px; }
+  .mk-pay span { padding: 0 9px; font-size: 10.5px; }
+  .chip span { padding: 0 13px; font-size: 13.5px; }
 }
 @media (max-width: 520px) {
   .hero { padding: 112px 0 56px; }
@@ -386,6 +396,17 @@ button { -webkit-appearance: none; appearance: none; }
 .field select { appearance: none; -webkit-appearance: none; padding-right: 44px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A3A3AC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-size: 18px; }
 .field select option { background: #121214; color: #fff; }
 .field ::placeholder { color: #6E6E77; }
+.field input:-webkit-autofill, .field input:-webkit-autofill:hover, .field input:-webkit-autofill:focus, .field textarea:-webkit-autofill { -webkit-text-fill-color: #fff; caret-color: #fff; -webkit-box-shadow: 0 0 0 1000px #0B0B0D inset; box-shadow: 0 0 0 1000px #0B0B0D inset; transition: background-color 99999s ease-out 0s; }
+.field input:-webkit-autofill:focus { -webkit-box-shadow: 0 0 0 1000px #0B0B0D inset, 0 0 0 4px rgba(200, 255, 61, .14); box-shadow: 0 0 0 1000px #0B0B0D inset, 0 0 0 4px rgba(200, 255, 61, .14); }
+.chips-field { border: 0; margin: 0; padding: 0; min-width: 0; }
+.chips-field legend { padding: 0; margin-bottom: 9px; font-size: 13.5px; font-weight: 500; color: rgba(255, 255, 255, .8); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { position: relative; }
+.chip input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.chip span { display: inline-flex; align-items: center; min-height: 42px; padding: 0 15px; border-radius: 999px; border: 1px solid var(--line-d2); background: #0B0B0D; font-size: 14px; font-weight: 500; color: rgba(255, 255, 255, .82); transition: background-color .2s, border-color .2s, color .2s; user-select: none; }
+.chip:hover span { border-color: rgba(255, 255, 255, .34); color: #fff; }
+.chip input:checked + span { background: var(--accent); border-color: var(--accent); color: var(--ink); font-weight: 600; }
+.chip input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(200, 255, 61, .14); }
 .field [aria-invalid="true"] { border-color: #FF7A6B; }
 .err { min-height: 0; font-size: 13px; color: #FF9B8F; }
